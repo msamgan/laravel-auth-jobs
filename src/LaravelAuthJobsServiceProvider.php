@@ -4,7 +4,6 @@ namespace MrPunyapal\LaravelAuthJobs;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use MrPunyapal\LaravelAuthJobs\Commands\LaravelAuthJobsCommand;
 
 class LaravelAuthJobsServiceProvider extends PackageServiceProvider
 {
@@ -17,9 +16,6 @@ class LaravelAuthJobsServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-auth-jobs')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel_auth_jobs_table')
-            ->hasCommand(LaravelAuthJobsCommand::class);
+            ->hasConfigFile();
     }
 }

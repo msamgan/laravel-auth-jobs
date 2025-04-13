@@ -3,8 +3,8 @@
 namespace MrPunyapal\LaravelAuthJobs\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use MrPunyapal\LaravelAuthJobs\LaravelAuthJobsServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
