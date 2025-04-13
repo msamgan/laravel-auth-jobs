@@ -34,8 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "MrPunyapal\\LaravelAuthJobs\\": "src/",
-            "MrPunyapal\\LaravelAuthJobs\\Database\\Factories\\": "database/factories/"
+            "MrPunyapal\\LaravelAuthJobs\\": "src/"
         }
     },
     "autoload-dev": {
@@ -63,10 +62,7 @@
         "laravel": {
             "providers": [
                 "MrPunyapal\\LaravelAuthJobs\\LaravelAuthJobsServiceProvider"
-            ],
-            "aliases": {
-                "LaravelAuthJobs": "MrPunyapal\\LaravelAuthJobs\\Facades\\LaravelAuthJobs"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
