@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace MrPunyapal\LaravelAuthJobs\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelAuthJobsCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-auth-jobs';
 
     public $description = 'My command';
 
