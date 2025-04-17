@@ -15,8 +15,8 @@ class AuthenticateJob
      */
     public function handle(object $job, Closure $next): void
     {
-        $guard = Context::get('laravel_auth_jobs_auth_guard');
-        $id = Context::get('laravel_auth_jobs_auth_id');
+        $guard = Context::getHidden('laravel_auth_jobs_auth_guard');
+        $id = Context::getHidden('laravel_auth_jobs_auth_id');
 
         Auth::guard($guard)->loginUsingId($id);
 

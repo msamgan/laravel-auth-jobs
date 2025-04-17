@@ -18,8 +18,8 @@ class AuthenticateJobs
     public function handle(Request $request, Closure $next): Response
     {
         if (Auth::check()) {
-            Context::add('laravel_auth_jobs_auth_id', Auth::id());
-            Context::add('laravel_auth_jobs_auth_guard', Auth::getDefaultDriver());
+            Context::addHidden('laravel_auth_jobs_auth_id', Auth::id());
+            Context::addHidden('laravel_auth_jobs_auth_guard', Auth::getDefaultDriver());
         }
 
         return $next($request);
