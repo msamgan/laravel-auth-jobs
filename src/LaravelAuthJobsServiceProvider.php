@@ -2,6 +2,8 @@
 
 namespace MrPunyapal\LaravelAuthJobs;
 
+use Illuminate\Routing\Router;
+use MrPunyapal\LaravelAuthJobs\Http\Middleware\AuthorizeJobs;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -17,5 +19,11 @@ class LaravelAuthJobsServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-auth-jobs')
             ->hasConfigFile();
+    }
+
+    public function bootingPackage()
+    {
+        $router = $this->app->make(Router::class);
+        $router->pushMiddlewareToGroup('web', AuthorizeJobs::class);
     }
 }
