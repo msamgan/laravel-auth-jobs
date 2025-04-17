@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Context;
 
-class AuthorizeJob
+class AuthenticateJob
 {
     /**
      * Process the queued job.

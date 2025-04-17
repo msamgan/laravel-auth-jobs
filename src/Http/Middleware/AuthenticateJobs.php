@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Context;
 use Symfony\Component\HttpFoundation\Response;
 
-class AuthorizeJobs
+class AuthenticateJobs
 {
     /**
      * Handle an incoming request.
