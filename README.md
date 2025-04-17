@@ -30,9 +30,42 @@ return [
 
 ## Usage
 
+This package provides two middleware: `AuthenticateJob`, you can add this middleware to your job class. and you can now access `auth()->user()` in your job class.
+
+### Job Class
+
 ```php
-// WIP
+use App\Models\Example;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Queue\Queueable;
+use MrPunyapal\LaravelAuthJobs\Http\Middleware\AuthenticateJob;
+
+class ExampleJob implements ShouldQueue
+{
+    use Queueable;
+
+    /**
+     * Get the middleware the job should pass through.
+     *
+     * @return array<int, object>
+     */
+    public function middleware(): array
+    {
+        return [new AuthenticateJob];
+    }
+
+    public function handle()
+    {
+        // You can now access auth()->user() here
+        $user = auth()->user();
+
+        // authorize your actions
+        Gate::authorize('view', Example::class);
+    }
+}
+
 ```
+
 
 ## Testing
 
