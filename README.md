@@ -42,7 +42,7 @@ This package provides two middleware: `AuthenticateJob`, you can add this middle
 use App\Models\Example;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
-use MrPunyapal\LaravelAuthJobs\Http\Middleware\AuthenticateJob;
+use MrPunyapal\LaravelAuthJobs\Jobs\Middleware\AuthenticateJob;
 
 class ExampleJob implements ShouldQueue
 {
