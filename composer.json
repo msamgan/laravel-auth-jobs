@@ -1,10 +1,17 @@
 {
     "name": "mrpunyapal/laravel-auth-jobs",
-    "description": "This package allows you to authorize you laravel jobs.",
+    "description": "This package allows you to access the authenticated user while processing jobs in the queue.",
     "keywords": [
         "MrPunyapal",
         "laravel",
-        "laravel-auth-jobs"
+        "laravel-auth-jobs",
+        "authorization",
+        "authentication",
+        "jobs",
+        "queue",
+        "laravel-jobs",
+        "laravel-queue",
+        "laravel-auth"
     ],
     "homepage": "https://github.com/mrpunyapal/laravel-auth-jobs",
     "license": "MIT",
@@ -65,6 +72,6 @@
             ]
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
