@@ -24,6 +24,12 @@ class LaravelAuthJobsServiceProvider extends PackageServiceProvider
     public function bootingPackage()
     {
         $router = $this->app->make(Router::class);
-        $router->pushMiddlewareToGroup('web', AuthenticateJobs::class);
+
+        foreach ($this->app['config']->get('auth-jobs.middleware_groups') as $group) {
+            $router->pushMiddlewareToGroup(
+                $group,
+                AuthenticateJobs::class
+            );
+        }
     }
 }

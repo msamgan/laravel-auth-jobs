@@ -24,7 +24,11 @@ This is the contents of the published config file:
 
 ```php
 return [
-    // No configuration options yet
+   // the middleware groups that are dispatching the jobs which need authentication
+    'middleware_groups' => [
+        'web',
+        // 'api',
+    ],
 ];
 ```
 
